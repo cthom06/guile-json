@@ -1,12 +1,12 @@
 (define-module (json reader))
 (export json:read-string
-								json:read-number
-								json:read-bool
-								json:read-null
-								json:null
-								json:read-list
-								json:read-object
-								json:read-value)
+	json:read-number
+	json:read-bool
+	json:read-null
+	json:null
+	json:read-list
+	json:read-object
+	json:read-value)
 (use-modules (ice-9 rdelim))
 (define (json:backslash fd)
 	(let ((c (read-char fd)))
