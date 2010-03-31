@@ -1,0 +1,12 @@
+guile-json: A basic JSON parser for Guile
+
+This is a json parser for Guile that I hacked together in ~3 hours, it's still a bit rough around the edges, but if you're json is valid it should handle it fine.
+
+**need to put some instructions here**
+
+BUGS:
+
+* Guile normally only supports ASCII, as such any unicode escape >00FF will get converted to 00FF to prevent errors. This may be fixed at some point
+* Guile's "null" is an empty list, so json's null is represented as a function json:null so you can test for equality.
+* Essentially chokes on any invalid input
+* Probably more
