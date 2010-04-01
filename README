@@ -1,8 +1,16 @@
 guile-json: A basic JSON parser for Guile
 
-This is a json parser for Guile that I hacked together in ~3 hours, it's still a bit rough around the edges, but if you're json is valid it should handle it fine.
+This is a json parser for Guile that I hacked together in ~3 hours (well, it's gone up since then), it's still a bit rough around the edges, but if your json is valid it should handle it fine.
 
-**need to put some instructions here**
+INSTALLATION:
+
+* Downloads/Instructions coming soon
+
+TO-DO:
+
+* Comments?
+* Clean up json-writer, a lot. It has some ugly output ([ [4, 5], [6, {'foo': 7} ] ] becomes [[4,5,],[6,{'foo':7,},],]
+* Fix data destruction of \u escapes (see BUGS)
 
 BUGS:
 
