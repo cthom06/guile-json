@@ -1,5 +1,5 @@
 (define-module (json writer))
-(export (json:dump))
+(export json:dump)
 (use-modules (srfi srfi-1) (srfi srfi-13))
 (define (json:dump-string s)
 	(let ((ls (string->list s)))
