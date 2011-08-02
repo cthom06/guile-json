@@ -15,18 +15,26 @@
 				((#\/) '(#\\ #\/))
 				(else (list c)))))
 		'(#\") ls) '(#\")))))
+
 (define (json:dump-list l)
 	(string-append
 		"["
-		(fold (lambda (i p)
-			(string-append p (json:dump i) ",")) "" l)
+		(string-join (map json:dump l) ", ")
 		"]"))
+
 (define (json:dump-object o)
-	(string-append
-		"{"
-		(hash-fold (lambda (k v p)
-			(string-append p (json:dump-string k) ":" (json:dump v) ",")) "" o)
-		"}"))
+  (string-append "{"
+		 (string-join
+		  (hash-fold
+		   (lambda (k v p)
+		     (cons
+		      (string-append (json:dump-string k) ": " (json:dump v))
+		      p))
+		   '()
+		   o)
+		  ", ")
+		 "}")))
+
 (define (json:dump-number n)
 	(number->string n))
 (define (json:dump-bool b)
