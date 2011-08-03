@@ -9,7 +9,7 @@ INSTALLATION:
 TO-DO:
 
 * Comments?
-* Clean up json-writer, a lot. It has some ugly output ([ [4, 5], [6, {'foo': 7} ] ] becomes [[4,5,],[6,{'foo':7,},],]
+* Clean up json-writer, some more
 * Fix data destruction of \u escapes (see BUGS)
 * Make error handling a bit more helpful
 
